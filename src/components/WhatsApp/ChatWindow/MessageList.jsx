@@ -19,6 +19,7 @@ function MessageList({ messages }) {
         ...media,
         media_data: media.media_data.toString().replace(/^http:/, 'https:'),
       }));
+      console.log(updatedMediaDetails)
   
       const updatedMediaDetailsMap = {};
       updatedMediaDetails.forEach((media) => {
