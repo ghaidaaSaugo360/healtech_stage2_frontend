@@ -31,7 +31,7 @@ const supportedTypes = [
   'image/webp'
 ];
 // Constants for authentication and API URL
-const authToken = 'EAAJ0ZApM92koBO0VoeDgb8QaNwtu4wpZBsj0M9PlHPQZCQxXGXC6Fc9ibFoFKkS5VZB55eydMqbDlTdG0kug1iyMZByjC4vYSX0lGwu6yE19cwM8JqP9E20VuyNZBZBuT9qZCZAVwlewwYCMYw1ZCwl0ysZBw48U6IjfvWnZCcPd7fiGWeuVrPpKwz6ZBw7BaOvjf0yFVeVlmFjPAxJiBlsuOYVtqWjx00UNNyXnrCPITGs9MFHIZD';
+const authToken = 'EAAJ0ZApM92koBOw5GRa4yb2mIF7PdV7dyJOGgSDrxMehddOLS2WzzDD9FZCW7sBqQMWFu4HP4RquvUZA2YvEJvwhxEnexiqhgZA7jSF5rcnZBxLFKivOjyEmSS1S29SPiBzw3o7IyddVAFuUDasloPn9iadpLOkeghioMyOzEM40ZAWBQZB7mRTdvDlrQZCg2IERbVAuBMi7XEzibbE7Hrj4GElGBHRdMY8oFeH6fUZBkXL0ZD';
 const apiUrl = 'https://graph.facebook.com/v17.0/120586281145678/messages';
 const Mp3Recorder = new MicRecorder({ bitRate: 128 });
 function ChatWindow({ selectedContact }) {
