@@ -165,7 +165,7 @@ function ChatWindow({ selectedContact }) {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const ws = new WebSocket(`wss://healtech13.azurewebsites.net/ws/whatsapp/`); 
+    const ws = new WebSocket('wss://healtech13.azurewebsites.net/ws/whatsapp/'); 
     setSocket(ws);
 
     return () => {
