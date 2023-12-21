@@ -7,6 +7,7 @@ import i18next from 'i18next'
 import cookies from 'js-cookie'
 import classNames from 'classnames'
 import Axios from "axios";
+import API_BASE_URL from "../../config/config";
 const languages = [
   {
     code: 'fr',
@@ -84,7 +85,7 @@ const prescriptionNamesFetched = useRef(false);
       const [prescriptionID, setPrescriptionID] = useState([]);
 const fetchPrescriptionNames = () => {
   if (!prescriptionNamesFetched.current) {
-    Axios.get("http://127.0.0.1:8000/prescription/")
+    Axios.get(`${API_BASE_URL}/prescription/`)
       .then((response) => {
         // Extract prescription names from the response
         setPrescriptionID(response.data)
@@ -117,7 +118,7 @@ const Close = () => {
         console.log("Form Data:", newPrescription);
         // Make an API request to save the patient data with the inputs state
         Axios
-          .post("http://127.0.0.1:8000/patienthasprescription/", newPrescription)
+          .post(`${API_BASE_URL}/patienthasprescription/`, newPrescription)
           .then((response) => {
             console.log("Prescription data saved successfully:", response.data);
             // Close the popup or perform other actions as needed
