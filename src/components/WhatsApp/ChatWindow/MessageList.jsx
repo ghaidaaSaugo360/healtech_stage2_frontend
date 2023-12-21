@@ -13,17 +13,24 @@ function MessageList({ messages }) {
     try {
       const response = await Axios.get(`${API_BASE_URL}/media/`);
       const allMedia = response.data;
-
-      const updatedMediaDetails = {};
-      allMedia.forEach((media) => {
-        updatedMediaDetails[media.id] = media;
+  
+      // Update media URLs to use HTTPS
+      const updatedMediaDetails = allMedia.map((media) => ({
+        ...media,
+        media_data: media.media_data.toString().replace(/^http:/, 'https:'),
+      }));
+  
+      const updatedMediaDetailsMap = {};
+      updatedMediaDetails.forEach((media) => {
+        updatedMediaDetailsMap[media.id] = media;
       });
-
-      setMediaDetails(updatedMediaDetails);
+  
+      setMediaDetails(updatedMediaDetailsMap);
     } catch (error) {
       console.error('Error fetching all media details:', error);
     }
   };
+  
 
   useEffect(() => {
     fetchAllMediaDetails();
