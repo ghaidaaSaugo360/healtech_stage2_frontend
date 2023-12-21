@@ -165,7 +165,7 @@ function ChatWindow({ selectedContact }) {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const ws = new WebSocket(`ws://${API_BASE_URL}/ws/whatsapp/`); 
+    const ws = new WebSocket(`wss://${API_BASE_URL}/ws/whatsapp/`); 
     setSocket(ws);
 
     return () => {
