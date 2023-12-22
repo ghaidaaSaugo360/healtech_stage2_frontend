@@ -88,7 +88,7 @@ const Room = ({ roomId }) => {
 
   const initializeWebSocket = (roomId) => {
     if (!webSockets.current[roomId]) {
-      webSockets.current[roomId] = new WebSocket(`wss://healtech13.azurewebsites.net/ws/${roomId}/`);
+      webSockets.current[roomId] = new WebSocket(`wss://healtech03.azurewebsites.net/ws/${roomId}/`);
 
       webSockets.current[roomId].onopen = (event) => {
         console.log('WebSocket connection opened:', event);
